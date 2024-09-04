@@ -8,4 +8,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Prism.DryIoc" Version="9.0.537" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PrismLib.Core\PrismLib.Core.csproj" />
+    <ProjectReference Include="..\PrismLib.Modules.Module1\PrismLib.Modules.Module1.csproj" />
+    <ProjectReference Include="..\PrismLib.Modules.Module2\PrismLib.Modules.Module2.csproj" />
+  </ItemGroup>
+
 </Project>
