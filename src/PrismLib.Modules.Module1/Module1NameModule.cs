@@ -1,4 +1,5 @@
-﻿using PrismLib.Modules.Module1.Views;
+﻿using PrismLib.Modules.Module1.ViewModels;
+using PrismLib.Modules.Module1.Views;
 using System.Diagnostics;
 
 namespace PrismLib.Modules.Module1
@@ -18,6 +19,7 @@ namespace PrismLib.Modules.Module1
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<Module1ViewModel>();
             containerRegistry.RegisterForNavigation<Module1View>();
         }
     }

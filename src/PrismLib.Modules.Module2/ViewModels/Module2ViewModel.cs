@@ -14,19 +14,21 @@ namespace PrismLib.Modules.Module2.ViewModels
             set { SetProperty(ref _bt, value); }
         }
 
-        public ICommand Module2Command {  get; set; }
+        public ICommand Module2Command => new DelegateCommand(OnModule, () => true);
 
         private readonly IEventAggregator _ea;
         public Module2ViewModel(IRegionManager regionManager, IEventAggregator ea) :
             base(regionManager)
         {
             _ea = ea;
-            Module2Command = new DelegateCommand(OnModule, () => true);
+            Debug.WriteLine("module2");
+
         }
         private void OnModule()
         {
             _ea.GetEvent<MessageSentEvent>().Publish("SetModule2");
 
         }
+      
     }
 }

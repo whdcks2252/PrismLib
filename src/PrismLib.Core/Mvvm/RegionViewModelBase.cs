@@ -1,4 +1,6 @@
-﻿namespace PrismLib.Core.Mvvm
+﻿using System.Windows.Media;
+
+namespace PrismLib.Core.Mvvm
 {
     public class RegionViewModelBase : ViewModelBase, INavigationAware, IConfirmNavigationRequest
     {

@@ -1,4 +1,5 @@
-﻿using PrismLib.Modules.Module2.Views;
+﻿using PrismLib.Modules.Module2.ViewModels;
+using PrismLib.Modules.Module2.Views;
 
 namespace PrismLib.Modules.Module2
 {
@@ -19,6 +20,7 @@ namespace PrismLib.Modules.Module2
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<Module2View>();
+
         }
     }
 }
